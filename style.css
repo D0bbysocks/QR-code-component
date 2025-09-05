@@ -1,0 +1,103 @@
+:root {
+    --slate-900: hsl(218 44% 22%);
+    --slate-500: hsl(216 15% 48%);
+    --slate-300: hsl(212 45% 89%);
+
+    --white: hsl(0 0% 100%);
+
+    /* Fonts */
+    /* heading */
+    --font-h1-size: 22px;
+    --font-h1-line: 120%;
+    --font-h1-track: 0px;
+
+    /* p */
+    --font-p-size: 15px;
+    --font-p-line: 140%;
+    --font-p-track: 0.2px;
+
+    /* spacing-scale */
+    --space-200: 1rem;      /* 16px */
+    --space-300: 1.5rem;    /* 24px */
+    --space-500: 2.5rem;    /* 40px */
+
+    /* border-radius */
+    --radius-sm: 10px;
+    --radius-bg: 20px;
+}
+
+@font-face {
+  font-family: "OutfitVariable";
+  src: url("./resources/fonts/Outfit-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900; /* Variabler Bereich */
+  font-style: normal;
+}
+
+/* 2. Reset / Normalize */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--slate-300);
+  font-family: "OutfitVariable", sans-serif;
+  font-weight: 400;
+}
+
+.page-wrapper {
+  width: min(100%, 1440px);
+  min-height: 960px;
+  background: var(--slate-300);
+  display: grid;
+  place-items: center;
+  padding: var(--space-500);
+}
+
+.card {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: var(--space-200);
+  padding-bottom: var(--space-500);
+  border-radius: var(--radius-bg);
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.qr img {
+  width: 288px;
+  height: 288px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.text {
+  width: 288px;
+  text-align: center;
+  padding-right: var(--space-200);
+  padding-left: var(--space-200);
+}
+
+.text h1 {
+  font-size: var(--font-h1-size);
+  line-height: var(--font-h1-line);
+  letter-spacing: var(--font-h1-track);
+  margin-top: var(--space-300);
+  color: var(--slate-900);
+  text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.text p {
+  font-size: var(--font-p-size);
+  line-height: var(--font-p-line);
+  letter-spacing: var(--font-p-track);
+  margin-top: var(--space-200);
+  color: var(--slate-500);
+}
