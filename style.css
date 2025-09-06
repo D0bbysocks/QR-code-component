@@ -26,6 +26,7 @@
     --radius-bg: 20px;
 }
 
+
 @font-face {
   font-family: "OutfitVariable";
   src: url("./resources/fonts/Outfit-VariableFont_wght.ttf") format("truetype-variations");
@@ -59,6 +60,18 @@ body {
   padding: var(--space-500);
 }
 
+@media (max-width: 460px) {
+  body { align-items: stretch; }
+  .page-wrapper {
+    width: 100%;
+    padding: 0;
+    min-height: 100%;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
 .card {
   width: auto;
   height: auto;
@@ -69,6 +82,12 @@ body {
   padding-bottom: var(--space-500);
   border-radius: var(--radius-bg);
   box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 460px) {
+  .card {
+    align-self: center;
+  }
 }
 
 .qr img {
@@ -100,4 +119,11 @@ body {
   letter-spacing: var(--font-p-track);
   margin-top: var(--space-200);
   color: var(--slate-500);
+}
+@media (max-width: 460px) {
+  .attribution {
+    align-self: end;
+    font-size: 0.7rem;
+    margin: var(--space-200) 0;
+  }
 }
